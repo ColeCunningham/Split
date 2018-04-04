@@ -1,0 +1,39 @@
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @item.text %>
+</p>
+
+<h2>Comments</h2>
+<% @item.comments.each do |comment| %>
+  <p>
+    <strong>Date:</strong>
+    <%= comment.date %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@item, @item.comments.build]) do |f| %>
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'item List', items_path %>
