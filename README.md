@@ -26,4 +26,5 @@ Things you may want to cover:
 Project Members:
 * Cole Cunningham
 * Samantha Thomas
+* David Visotsky
 
