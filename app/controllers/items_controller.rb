@@ -1,5 +1,9 @@
 class ItemsController < ApplicationController
     
+    def index
+        @items = Item.all
+    end
+    
     def new
         @item = Item.new
     end
@@ -13,6 +17,14 @@ class ItemsController < ApplicationController
     end
     
     def create
+
+    def show
+         @item = Item.find(params[:id])
+    end
+    
+    def create
+        
+
         @item = Item.new(item_params)
         
         if @item.save
@@ -42,8 +54,14 @@ class ItemsController < ApplicationController
         redirect_to items_path
     end
     
+
     private
-    def item_params
-        params.require(:item).permit(:title, :description, :date)
+
+
+    private
+
+        def item_params
+            params.require(:item).permit(:title, :description, :date)
+        end
     end
 end
