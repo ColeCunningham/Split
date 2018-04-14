@@ -26,6 +26,19 @@
 <form><br>
 
 
+<h2>List of Items</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @listings.each do |listing| %>
+    <tr>
+      <td><%= listing.title %></td>
+      <td><%= listing.description %></td>
+<%end%>
+</table>
 
 <div>
 <input type="submit" value="Add Listing"><br><br>
