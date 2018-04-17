@@ -33,17 +33,17 @@
     <th>Text</th>
   </tr>
  
-  <% @listings.each do |listing| %>
+  <% @items.each do |item| %>
     <tr>
-      <td><%= listing.title %></td>
-      <td><%= listing.description %></td>
-<%end%>
+      <td><%= item.title %></td>
+      <td><%= item.description %></td>
+  <%end%>
 </table>
 
 <div>
-    <%= link_to 'Add Listing', new_item_path %> <br>
+    <%= link_to 'Add Item', new_item_path %> <br>
     
-<input type="submit" value="Add Listing"><br><br>
+<input type="submit" value="Add Item"><br><br>
 </div>
 </form> 
     
