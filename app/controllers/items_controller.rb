@@ -1,21 +1,21 @@
 class ItemsController < ApplicationController
-    
-    def new
+    def index
+        @items = Item.all
     end
     
-    def index
-        @listings = Listing.all
+    def new
+        @item = Item.new
     end
     
     def create
-       @listing = Listing.new(params[:listing])
+       @item = Item.new(params[:item])
        
-       @listing.save
-       redirect_to @listing
+       @item.save
+       redirect_to @item
     end
 end
 
 private
-    def listing_params
-       params.require(:listing).permit(:title, :description) 
+    def item_params
+       params.require(:item).permit(:title, :description) 
     end
