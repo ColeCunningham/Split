@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html>
-    
-<head>
-    <link rel="stylesheet" href="split.css">
-    <title>Index Page</title>
-    
-<meta name="description" content="Items">
-</head>
-    
-<body>
-    <div class="content">
-    <!-- Page Content -->
-    </div>
-    
-   <!-- navigation bar -->
-<div  class="topnav" id="myTopnav">
-  <a  href="welcome.html">Home</a>
-  <a  class="active" href="items.html">Items</a>
-
-  <div class="topnav-right">
-  <input type="text" placeholder="Search..">
-  </div>
-</div>
-    
-<form><br>
-
-
 <h2>List of Items</h2>
+<%= link_to 'Add Item', new_item_path %>
 <table>
   <tr>
     <th>Title</th>
@@ -37,9 +10,9 @@
     <tr>
       <td><%= item.title %></td>
       <td><%= item.description %></td>
+    </tr>
   <%end%>
 </table>
 
-<div>
-    <%= link_to 'Add Item', new_item_path %> <br>
+
 
