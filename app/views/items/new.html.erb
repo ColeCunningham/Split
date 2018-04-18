@@ -32,13 +32,19 @@
 <form action="#">
 
 <div>
-Title<br>
-<input type="text" name="title">
-<br>
-Description<br>
-<input type="text" name="Description">
-<br><br>
-<button name="submit" type="submit" value="Add Listing">Add Listing</button>
+
+<% form_for @listing do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ <% end %>
+ 
 </div>
 </form><br>   
     
@@ -48,7 +54,7 @@ Description<br>
 <footer>
 
     <p>
-        &copy; 2018 Split It <br>
+        &copy; 2018 Split <br>
     </p>
     
 </footer>   
