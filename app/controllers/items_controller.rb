@@ -2,24 +2,43 @@ class ItemsController < ApplicationController
     def index
         @items = Item.all
     end
-    
-    def index
-        @items = Item.all
-    end
-    
+   
     def new
         @item = Item.new
     end
     
     def create
-       @item = Item.new(params[:item])
-       
-       @item.save
-       redirect_to @item
+        @item = Item.new(item_params)
+        
+        if @item.save
+            redirect_to @item
+        else
+            render 'new'
+        end
     end
-end
-
-private
+    
+    def edit
+        @item = Item.find(params[:id])
+    end
+    
+    def update
+        @item = Item.find(params[:id])
+        if @item.update(article_params)
+            redirect_to @item
+        else
+            render 'edit'
+        end
+    end
+    
+    def show
+        @item = Item.find(params[:id])
+    end
+    
+    private
     def item_params
        params.require(:item).permit(:title, :description) 
     end
+    
+end
+
+
