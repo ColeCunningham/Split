@@ -17,28 +17,29 @@
 <div  class="topnav" id="myTopnav">
   <a  href="welcome.html">Home</a>
   <a  class="active" href="items.html">Items</a>
-  <a  href="listings.html">Listings</a>
-  <a href="about.html">About Us</a>  
+
   <div class="topnav-right">
   <input type="text" placeholder="Search..">
   </div>
 </div>
     
 <form><br>
-<div>
-<input type="submit" value="Add Listing"><br><br>
-</div>
-</form> 
-    
-<footer>
 
-    <p>
-        &copy; 2018 Split It <br>
-    </p>
-    
-</footer>   
-    
-    
-</body>
-    
-</html>
+
+<h2>List of Items</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.title %></td>
+      <td><%= item.description %></td>
+  <%end%>
+</table>
+
+<div>
+    <%= link_to 'Add Item', new_item_path %> <br>
+

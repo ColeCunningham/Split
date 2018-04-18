@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <link rel="stylesheet" href="split.css">
+    <title>Index Page</title>
+    
+<meta name="description" content="Listings">
+</head>
+    
+    
+<body>
+    <div class="content">
+    <!-- Page Content -->
+    </div>
+    
+    <!-- navigation bar -->
+<div  class="topnav" id="myTopnav">
+  <a  href="index.html">Home</a>
+  <a  href="items.html">Items</a>
+  <div class="topnav-right">
+  <input type="text" placeholder="Search..">
+  </div>
+</div>
+    
+    
+<h2>Add Item</h2>
+
+    
+<!-- Listing Form -->
+
+<%= form_for @item do |f| %>
+
+    <p>
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+    </p>
+    
+    <p>
+        <%= f.label :description %><br>
+        <%= f.text_area :description %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
+    
+<%= link_to 'Back', items_path %>
+    
+    
+<footer>
+
+    <p>
+        &copy; 2018 Split It <br>
+    </p>
+    
+</footer>   
+    
+</body>
+    
+</html>
