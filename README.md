@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+ 
+Project Members:
+* Cole Cunningham
+* Samantha Thomas
+* David Visotsky
+

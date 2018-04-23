@@ -9,6 +9,19 @@
   </head>
 
   <body>
+    <div  class="topnav" id="myTopnav">
+      <%= link_to 'Home', controller: 'welcome' %>
+      <%= link_to 'Items', controller: 'items' %>
+      <div class="topnav-right">
+        <input type="text" placeholder="Search..">
+      </div>
+    </div>
+    
     <%= yield %>
   </body>
+  
+  <footer>
+
+  </footer>  
+  
 </html>
