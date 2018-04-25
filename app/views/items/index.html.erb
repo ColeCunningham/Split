@@ -1,24 +1,20 @@
 <h2>List of Items</h2>
 <%= link_to 'Add Item', new_item_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
+<ul>
   <% @items.each do |item| %>
-    <tr>
-      <td><%= item.title %></td>
-      <td><%= item.description %></td>
-      <td><%= link_to 'Show', item_path(item) %></td>
-      <td><%= link_to 'Edit', edit_item_path(item) %></td>
-      <td><%= link_to 'Destroy', 
-                                item_path(item), 
-                                method: :delete, 
-                                data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+    <li><%= item.title %></li>
+    <li><%= item.imgUrl %></li>
+    <li><%= item.url %></li>
+    <li><%= item.quantity %></li>
+    <li><%= item.price %></li>
+    <li><%= link_to 'Show', item_path(item) %>
+        <%= link_to 'Edit', edit_item_path(item) %>
+        <%= link_to 'Destroy', 
+                              item_path(item), 
+                              method: :delete, 
+                              data: { confirm: 'Are you sure?' } %></li><br>
   <%end%>
-</table>
+</ul>
 
 
 
