@@ -8,4 +8,31 @@
   <%= @item.description %>
 </p>
 
+<h2> Questions</h2>
+<% @item.questions.each do |question| %>
+<p>
+  <strong>Name:</strong>
+  <%= question.name %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= question.question %>
+</p>
+<% end %>
+
+<h2>Ask a question</h2>
+<%= form_for([@item, @item.questions.build]) do |f| %>
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :question %><br>
+  <%= f.text_area :question %>
+</p>
+<p>
+  <%= f.submit "Post question" %>
+</p>
+<% end %>
 <%= link_to 'item List', items_path %>

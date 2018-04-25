@@ -1,0 +1,15 @@
+<p>
+  <strong>Name:</strong>
+  <%= question.name %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= question.question %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Question', [question.item, question],
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %>
+</p>
