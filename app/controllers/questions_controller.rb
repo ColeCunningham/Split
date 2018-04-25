@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
     def create
-        @item = Items.find(params[:item_id])
+        @item = Item.find(params[:item_id])
         @question = @item.questions.create(question_params)
         redirect_to item_path(@item)
     end
