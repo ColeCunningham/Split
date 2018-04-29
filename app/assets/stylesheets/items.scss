@@ -118,9 +118,9 @@ body {
 
 /*styling for list boxes*/
 div.product {
-    float: left; width: 250px; height: 250;
+    float: left; width: 350px; height: 250;
     background-color: white;
-    border-bottom: #46a35f 2px solid;
+    border-bottom: #46a35f 3px solid;
     position: relative;
 }
 
@@ -144,7 +144,7 @@ div.product a.name {
     color: black;
     font-size: 13px;
     text-decoration: none;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 
 div.product div {
@@ -159,7 +159,7 @@ div.product div {
 
 
 div.product a.cart {
-    border-top: #46a35f .05px solid;
+    
     background: #f2f2f2 url(fa fa-shopping-cart) 20% 1px no-repeat;
     line-height: 30px;
     font-weight: bold;

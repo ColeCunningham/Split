@@ -21,35 +21,24 @@
   </p>
  
   <p>
-<<<<<<< HEAD
-      <%= f.label :URL %><br>
-      <%= f.text_field :description %>
-=======
-      <%= f.label :imgUrl %><br>
-      <%= f.text_area :imgUrl %>
-  </p>
- 
-  <p>
-      <%= f.label :url %><br>
-      <%= f.text_area :url %>
+      <%= f.label :"Image URL" %><br>
+      <%= f.text_field :imgUrl %>
   </p>
   
   <p>
-      <%= f.label :quantity %><br>
-      <%= f.text_area :quantity %>
+      <%= f.label :"Total Price" %><br>
+      <%= f.text_field :price %>
   </p>
   
-  <p>
-      <%= f.label :price %><br>
-      <%= f.text_area :price %>
->>>>>>> 194eba1f1294882cbf11538725ea4038ea43e835
+    <p>
+      <%= f.label :"Quantity available" %><br>
+      <%= f.text_field :quantity %>
   </p>
   
-  <p>
-      <%= f.label :Cost %><br>
-      <%= f.text_field :date %>
+    <p>
+      <%= f.label :"Link to site" %><br>
+      <%= f.text_field :url %>
   </p>
-  
  
   <p>
     <%= f.submit %>
