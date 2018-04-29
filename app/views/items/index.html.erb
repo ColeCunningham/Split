@@ -1,5 +1,6 @@
 <h2>List of Items</h2>
 <%= link_to 'Add Item', new_item_path %>
+<<<<<<< HEAD
 <table>
  
   <% @items.each do |item| %>
@@ -14,8 +15,23 @@
                                 method: :delete, 
                                 data: { confirm: 'Are you sure?' } %></td>
     </tr>
+=======
+<ul>
+  <% @items.each do |item| %>
+    <li><%= item.title %></li>
+    <li><%= item.imgUrl %></li>
+    <li><%= item.url %></li>
+    <li><%= item.quantity %></li>
+    <li><%= item.price %></li>
+    <li><%= link_to 'Show', item_path(item) %>
+        <%= link_to 'Edit', edit_item_path(item) %>
+        <%= link_to 'Destroy', 
+                              item_path(item), 
+                              method: :delete, 
+                              data: { confirm: 'Are you sure?' } %></li><br>
+>>>>>>> 194eba1f1294882cbf11538725ea4038ea43e835
   <%end%>
-</table>
+</ul>
 
 
 <!DOCTYPE html>
