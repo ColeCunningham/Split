@@ -31,11 +31,13 @@
 <meta name="description" content="Items">
 </head>
     
-<body>
+<body style= "margin-left:60px;">
     <div class="content">
     <!-- Page Content -->
 
-   <%= x = 1 %>
+   <%= x = 0 %>
+   
+   
         <ul>
             
             <% @items.each do |item| %>
@@ -44,13 +46,13 @@
                 
                 <a href="#" class="img"><img src= <%=item.imgUrl%>></a>
                 <a href="#" class="name"><%=item.title%></a>
-                <div>$<%=item.price%></div>
+                <div>$<%=item.price%>, Quantity: <%= item.quantity%></div>
                 <a href="#" class="cart">Split!</a>
                     <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span><%=x%></span>
+                    <span><%= x+=1 %></span>
                 </div>
             </li>
-            <%= x = x+1 %>
+            
             <%end%>
          </ul>
     </div>

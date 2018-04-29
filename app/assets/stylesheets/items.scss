@@ -22,14 +22,14 @@
 
 /* Change the color of links when hover */
 .topnav a:hover {
-    background-color: #46a35f;
-    color: #46a35f;
+    background-color: #ddd;
+    color: black;
 }
 
 /* Add a color to the active link */
 .topnav a.active {
     background-color: #46a35f;
-    color: #46a35f;
+    color: white;
 }
 
 /* Right-aligned section inside the top navigation */
@@ -118,10 +118,19 @@ body {
 
 /*styling for list boxes*/
 div.product {
-    float: left; width: 350px; height: 250;
+    float: left; width: 250px; height: 300px;
     background-color: white;
-    border-bottom: #46a35f 3px solid;
+    
     position: relative;
+    border-style: solid;
+    border-color: #46a35f ;
+    margin: 10px;
+    transition: transform .2s; /* Animation */
+}
+
+div.product:hover{
+    border-style: ridge;
+    transform: scale(1.05); /* zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 div.product a {
@@ -165,6 +174,7 @@ div.product a.cart {
     font-weight: bold;
     color: #46a35f;
     text-decoration: none;
+    
 }
 
 
