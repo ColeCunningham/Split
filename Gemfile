@@ -33,9 +33,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-<<<<<<< HEAD
-group :test do
-=======
 
 #gem to create UML diagrams
 group :development do
@@ -45,7 +42,6 @@ end
 
 
 group :development, :test do
->>>>>>> 60d895c49e3d9b9f9486e73daa0bbc31af6dba21
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'cucumber'
