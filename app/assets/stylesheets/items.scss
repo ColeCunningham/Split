@@ -168,14 +168,14 @@ div.product a.cart {
 }
 
 
-/*lil number bubble at the top*/
+/*lil number bubble at the top corner*/
 div.product span {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 30px;
