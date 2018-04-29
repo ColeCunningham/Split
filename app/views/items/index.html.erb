@@ -34,127 +34,20 @@
 
     <div class="itemsList">
         <ul>
+            <% @items.each do |item| %>
+            <%= x = 1 %>
             <li>
                 <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0003700079348_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Bounty Paper Towels</a>
-                <div>$25.98</div>
+                <a href="#" class="img"><img src= <%item.description%>></a>
+                <a href="#" class="name"><%=item.title%></a>
+                <div>$<%=item.date%></div>
                 <a href="#" class="cart">Split!</a>
                     <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>1</span>
+                    <span>x</span>
                 </div>
             </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0003624181305_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Lysol Power Toilet Bowl Cleaner, 10X Cleaning Power</a>
-                <div>$7.98</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>2</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0004460014894_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Clorox Toilet Bowl Cleaner</a>
-                <div>$8.98</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>3</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0004200096765_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Quilted Northern Toilet Paper</a>
-                <div>$19.96</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>4</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0003700098148_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Charmin Ultra Soft Toilet Paper</a>
-                <div>$20.98</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                <span>5</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0003600048562_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Cottonelle Flushable Wipes</a>
-                <div>$14.83</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>6</span>
-                </div>
-            </li>
-        
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0003700091860_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Dawn Ultra Total Clean, Apple Orchard</a>
-                <div>$8.78</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>7</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0001920080425_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Lysol Neutra Air Citrus Scent</a>
-                <div>$15.24</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>8</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0040619585679_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Purell Healthy Soap</a>
-                <div>$20.97</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>9</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0005400039907_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Scott Bath Tissue</a>
-                <div>$23.28</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>10</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0086368600465_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Snack Care Package</a>
-                <div>$18.48</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>11</span>
-                </div>
-            </li>
-            <li>
-                <div class="product">
-                <a href="#" class="img"><img src="https://images.samsclubresources.com/is/image/samsclub/0003700072277_A?$img_size_380x380$"/></a>
-                <a href="#" class="name">Crest Toothpaste</a>
-                <div>$23.28</div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>12</span>
-                </div>
-            </li>
+            <%= x = x+1 %>
+            <%end%>
          </ul>
     </div>
     
