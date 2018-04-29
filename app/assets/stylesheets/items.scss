@@ -107,13 +107,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    
 }
+
+
 
 .itemsList {
     list-style-type: none;
 }
 
+
+/*styling for list boxes*/
 div.product {
     float: left; width: 250px; height: 250;
     background-color: white;
@@ -133,7 +136,7 @@ div.product a.img {
 div.product a.img img {
     height: 170px;
     max-width: 100%;
-    border-bottom: #46a35f 2px solid;
+    
 }
 
 div.product a.name {
@@ -165,7 +168,7 @@ div.product a.cart {
 }
 
 
-
+/*lil number bubble at the top*/
 div.product span {
     position: absolute;
     top: 0px;
@@ -183,10 +186,11 @@ div.product span {
 
 div.product:hover span {
     background-color: #ddd;
+    opacity: 5%;
 }
 
 div.product:hover a.img img {
-    opacity: 0.5%;
+    opacity: 5%;
 }
 
 

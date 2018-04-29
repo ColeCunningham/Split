@@ -9,7 +9,6 @@ class CreateItems < ActiveRecord::Migration[5.1]
       
     self.up
       add_column :items, cost, :double
-    
       
     end
   end

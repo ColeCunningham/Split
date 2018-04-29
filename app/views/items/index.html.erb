@@ -6,6 +6,7 @@
     <tr>
       <td><%= item.title %></td>
       <td><%= item.description %></td>
+      <td><%= item.date%></td>
       <td><%= link_to 'Show', item_path(item) %></td>
       <td><%= link_to 'Edit', edit_item_path(item) %></td>
       <td><%= link_to 'Destroy', 
@@ -34,16 +35,17 @@
 
     <div class="itemsList">
         <ul>
-            <% @items.each do |item| %>
             <%= x = 1 %>
+            <% @items.each do |item| %>
+            
             <li>
                 <div class="product">
-                <a href="#" class="img"><img src= <%item.description%>></a>
+                <a href="#" class="img"><img src= <%=item.description%>></a>
                 <a href="#" class="name"><%=item.title%></a>
                 <div>$<%=item.date%></div>
                 <a href="#" class="cart">Split!</a>
                     <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span>x</span>
+                    <span><%=x%></span>
                 </div>
             </li>
             <%= x = x+1 %>
@@ -55,8 +57,6 @@
     
     </div>
 
-    
-    
 </body>
     
 </html>
