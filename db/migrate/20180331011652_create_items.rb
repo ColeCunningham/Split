@@ -6,6 +6,10 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.string :date
 
       t.timestamps
+      
+    self.up
+      add_column :items, cost, :double
+      
     end
   end
 end

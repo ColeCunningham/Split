@@ -1,15 +1,12 @@
 <h2>List of Items</h2>
 <%= link_to 'Add Item', new_item_path %>
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
  
   <% @items.each do |item| %>
     <tr>
       <td><%= item.title %></td>
       <td><%= item.description %></td>
+      <td><%= item.date%></td>
       <td><%= link_to 'Show', item_path(item) %></td>
       <td><%= link_to 'Edit', edit_item_path(item) %></td>
       <td><%= link_to 'Destroy', 
@@ -21,4 +18,45 @@
 </table>
 
 
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <link rel="stylesheet" href="split.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Items Page</title>
+    
+<meta name="description" content="Items">
+</head>
+    
+<body>
+    <div class="content">
+    <!-- Page Content -->
 
+    <div class="itemsList">
+        <ul>
+            <%= x = 1 %>
+            <% @items.each do |item| %>
+            
+            <li>
+                <div class="product">
+                <a href="#" class="img"><img src= <%=item.description%>></a>
+                <a href="#" class="name"><%=item.title%></a>
+                <div>$<%=item.date%></div>
+                <a href="#" class="cart">Split!</a>
+                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
+                    <span><%=x%></span>
+                </div>
+            </li>
+            <%= x = x+1 %>
+            <%end%>
+         </ul>
+    </div>
+    
+
+    
+    </div>
+
+</body>
+    
+</html>
