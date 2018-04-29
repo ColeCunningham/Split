@@ -1,3 +1,4 @@
 class Item < ApplicationRecord
-     validates :title, presence: true
+    has_many :transactions
+    validates :title, presence: true
 end

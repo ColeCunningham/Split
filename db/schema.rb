@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180425182956) do
+ActiveRecord::Schema.define(version: 20180429191741) do
 
   create_table "items", force: :cascade do |t|
     t.string "title"
@@ -21,6 +21,25 @@ ActiveRecord::Schema.define(version: 20180425182956) do
     t.string "url"
     t.integer "quantity"
     t.decimal "price"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string "name"
+    t.integer "quantity"
+    t.integer "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_transactions_on_item_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
