@@ -23,4 +23,12 @@
   <%= @item.price %>
 </p>
 
+<h2>Pending Splits</h2>
+<% @item.transactions.each do |transaction| %>
+  <p>
+    <%= transaction.name %>
+    <strong><%= transaction.quantity %></strong>
+  </p>
+<% end %>
+
 <%= link_to 'item List', items_path %>

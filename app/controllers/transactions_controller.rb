@@ -1,7 +1,7 @@
 class TransactionsController < ApplicationController
     def create
         @item = Item.find(params[:item_id])
-        @transaction = @item.transaction.create(transaction_params)
+        @transaction = @item.transactions.create(transaction_params)
         redirect_to item_path(@item)
     end
     

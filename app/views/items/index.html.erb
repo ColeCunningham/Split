@@ -7,6 +7,15 @@
     <li><%= item.url %></li>
     <li><%= item.quantity %></li>
     <li><%= item.price %></li>
+    <li>
+      <%= form_for([item, item.transactions.build]) do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :quantity %>
+        <%= f.text_field :quantity %>
+        <%= f.submit "Split" %>
+      <% end %>
+    </li>
     <li><%= link_to 'Show', item_path(item) %>
         <%= link_to 'Edit', edit_item_path(item) %>
         <%= link_to 'Destroy', 
