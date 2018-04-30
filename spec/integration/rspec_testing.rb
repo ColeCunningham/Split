@@ -28,8 +28,11 @@ feature"Shopper adds an item" do
         expect(page).to have_content("3")
         expect(page).to have_content("www.LinkToSite.com")
     end
+end
+
+feature "Shopper Splits an item" do
     
-    scenario "Shopper splits a product by signing up to buy it" do
+    scenario "Shopper splits a product by committing to buy it" do
        visit new_item_path
         expect(page).to have_content("Add Item")
         fill_in "Title", with: "New Capybara Item"
@@ -48,6 +51,9 @@ feature"Shopper adds an item" do
         expect(page).to have_content("Pending Splits")
         expect(page).to have_content("Kamil 3")
     end
+end
+
+feature "Admin edits inappropriate content" do
     
     scenario "Admin edits a product's image after a copyright infringement claim" do
        visit new_item_path
@@ -68,6 +74,5 @@ feature"Shopper adds an item" do
         expect(page).to have_content("3")
         expect(page).to have_content("www.LinkToSite.com")
     end
-    
     
 end
