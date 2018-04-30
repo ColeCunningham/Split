@@ -27,4 +27,5 @@ Project Members:
 * Cole Cunningham
 * Samantha Thomas
 * David Visotsky
-
+* Kamil Alkhiary
+* Minhquan Nguyen
