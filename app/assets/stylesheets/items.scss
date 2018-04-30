@@ -118,19 +118,21 @@ body {
 
 /*styling for list boxes*/
 div.product {
-    float: left; width: 250px; height: 300px;
+    float: left; width: 250px; height: 340px;
     background-color: white;
     
     position: relative;
-    border-style: solid;
+    border-style: none;
     border-color: #46a35f ;
+    box-shadow: 2px 2px 5px grey;
     margin: 10px;
+    padding: 12px;
     transition: transform .2s; /* Animation */
 }
 
 div.product:hover{
     border-style: ridge;
-    transform: scale(1.05); /* zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.025); /* zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 div.product a {
@@ -148,21 +150,22 @@ div.product a.img img {
     
 }
 
-div.product a.name {
-    font-weight: bolder;
+div.product .name {
     color: black;
     font-size: 13px;
     text-decoration: none;
+    text-align: left;
     margin-top: 7px;
 }
 
-div.product div {
+
+
+.product .price {
     font-size: 16px;
     font-weight: bold;
     color: #333;
-    text-indent: 10px;
-    margin: 10px 0 10px 0;
-    float: left;
+    margin: 20px 0 20px 0;
+    text-align: left;
     width: 100%;
 }
 
@@ -201,6 +204,10 @@ div.product:hover span {
 
 div.product:hover a.img img {
     opacity: 5%;
+}
+
+.noStyle {
+    list-style-type: none;
 }
 
 

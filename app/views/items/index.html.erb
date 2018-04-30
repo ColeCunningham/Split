@@ -36,40 +36,24 @@
     <link rel="stylesheet" href="split.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Items Page</title>
-    
-<meta name="description" content="Items">
+    <meta name="description" content="Items">
 </head>
     
 <body style= "margin-left:60px;">
     <div class="content">
-    <!-- Page Content -->
-
-   <%= x = 0 %>
-   
-   
+        <!-- Page Content -->
         <ul>
-            
-            <% @items.each do |item| %>
+        <% @items.each do |item| %>
             <div class="product">
-            <li>
-                
-                <a href="#" class="img"><img src= <%=item.imgUrl%>></a>
-                <a href="#" class="name"><%=item.title%></a>
-                <div>$<%=item.price%>, Quantity: <%= item.quantity%></div>
-                <a href="#" class="cart">Split!</a>
-                    <i class="fa fa-shopping-cart" style="font-size: 25px"></i>
-                    <span><%= x+=1 %></span>
-                </div>
-            </li>
-            
-            <%end%>
-         </ul>
+                <li class="noStyle">
+                    <a href="#" class="img"><img src= <%=item.imgUrl%>></a>
+                    <%= link_to item.title, item_path(item), class: "name" %>
+                    <div class="price">$<%=item.price%></div>
+                    <a href="#">Split!</a>
+                </li>
+            </div>
+        <%end%>
+        </ul>
     </div>
-    
-
-    
-    </div>
-
 </body>
-    
 </html>
