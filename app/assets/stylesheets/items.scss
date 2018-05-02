@@ -26,11 +26,7 @@
     color: black;
 }
 
-/* Add a color to the active link */
-.topnav a.active {
-    background-color: #46a35f;
-    color: white;
-}
+
 
 /* Right-aligned section inside the top navigation */
 .topnav-right {
@@ -91,6 +87,7 @@ form.searchbutton::after {
     
 }
 
+
 /*styling for body*/
 body {
   margin: 0;
@@ -109,6 +106,16 @@ body {
     width: 60%;
 }
 
+/*Add items style*/
+div.add{
+    text-decoration: none;
+    margin:20px;
+    margin-left:40px;
+    clear: left;
+    font-size: 110%;
+    color:green;
+    
+}
 
 
 .itemsList {
