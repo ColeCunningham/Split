@@ -1,32 +1,6 @@
 <h2>List of Items</h2>
 <%= link_to 'Add Item', new_item_path %>
 
-<ul>
-  <% @items.each do |item| %>
-    
-    <li><%= item.title %></li>
-    <li><%= item.imgUrl %></li>
-    <li><%= item.url %></li>
-    <li><%= item.quantity %></li>
-    <li><%= item.price %></li>
-    <li>
-      <%= form_for([item, item.transactions.build]) do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        <%= f.label :quantity %>
-        <%= f.text_field :quantity %>
-        <%= f.submit "Split" %>
-      <% end %>
-    </li>
-    <li><%= link_to 'Show', item_path(item) %>
-        <%= link_to 'Edit', edit_item_path(item) %>
-        <%= link_to 'Destroy', 
-                              item_path(item), 
-                              method: :delete, 
-                              data: { confirm: 'Are you sure?' } %></li><br>
-
-  <%end%>
-</ul>
 
 
 <!DOCTYPE html>
@@ -39,10 +13,10 @@
     <meta name="description" content="Items">
 </head>
     
-<body style= "margin-left:60px;">
+<body style= "margin-left:0px;">
     <div class="content">
         <!-- Page Content -->
-        <ul>
+        <ul id = items>
         <% @items.each do |item| %>
             <div class="product">
                 <li class="noStyle">
@@ -55,5 +29,28 @@
         <%end%>
         </ul>
     </div>
+    
+    <script>
+    function search() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("items");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[1];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
+    
 </body>
 </html>
