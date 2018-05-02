@@ -23,7 +23,9 @@
                     <a href="#" class="img"><img src= <%=item.imgUrl%>></a>
                     <%= link_to item.title, item_path(item), class: "name" %>
                     <div class="price">$<%=item.price%></div>
-                    <a href="#">Split!</a>
+                    <b>
+                    <a style="color:green;text-decoration: none;" href="#">Split!</a>
+                    </b>
                 </li>
             </div>
         <%end%>
