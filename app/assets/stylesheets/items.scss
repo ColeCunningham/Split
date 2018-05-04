@@ -125,7 +125,8 @@ div.add{
 
 /*styling for list boxes*/
 div.product {
-    float: left; width: 250px; height: 340px;
+    float: left; 
+    width: 250px; height: 340px;
     background-color: white;
     position: relative;
     border-style: none;
@@ -135,6 +136,8 @@ div.product {
     padding: 12px;
     transition: transform .4s; /* Animation */
 }
+
+
 
 div.product:hover{
     border-style: ridge;

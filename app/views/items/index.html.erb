@@ -24,7 +24,7 @@
         <ul id = items>
         <% @items.each do |item| %>
             <div class="product">
-                <li class="noStyle">
+                <li class="noStyle", id = "item">
                     <a href="#" class="img"><img src= <%=item.imgUrl%>></a>
                     <%= link_to item.title, item_path(item), class: "name" %>
                     <div class="price">$<%=item.price%></div>
@@ -37,7 +37,9 @@
         </ul>
     </div>
     
+    
     <script>
+    //Search function
     function search() {
     // Declare variables
     var input, filter, ul, li, a, i;
@@ -52,7 +54,8 @@
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
                 li[i].style.display = "";
             } else {
-                li[i].style.display = "none";
+                li[i].style.display = "none"
+                
             }
         }
     }
