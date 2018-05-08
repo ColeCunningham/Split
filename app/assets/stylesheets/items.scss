@@ -107,14 +107,15 @@ body {
 }
 
 /*Add items style*/
-div.add{
+div.add a{
+    background-color: #a5a5a5;
+    color: #268931;
+    font-weight: bold;
+    margin: 15px 40px;
+    padding: 14px 25px;
+    text-align: center;
     text-decoration: none;
-    margin:20px;
-    margin-left:40px;
-    clear: left;
-    font-size: 110%;
-    color:green;
-    
+    display: inline-block;
 }
 
 
@@ -128,7 +129,7 @@ div.product {
     float: left; 
     width: 250px; height: 340px;
     background-color: white;
-    position: relative;
+    //position: relative;
     border-style: none;
     border-color: #46a35f ;
     box-shadow: 2px 2px 5px gray;
